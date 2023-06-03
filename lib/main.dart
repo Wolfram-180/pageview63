@@ -38,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(title),
       ),
       body: PageView(
+        scrollDirection: Axis.vertical,
         children: [
           Container(
             color: Colors.red,
