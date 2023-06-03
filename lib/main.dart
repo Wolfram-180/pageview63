@@ -4,7 +4,7 @@ void main() {
   runApp(const MyApp());
 }
 
-final String title = 'PageView';
+const String title = 'PageView';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -35,19 +35,23 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(title),
+        title: const Text(title),
       ),
-      body: PageView(
-        scrollDirection: Axis.vertical,
-        children: [
+      body: PageView.builder(
+        itemBuilder: (BuildContext context, int index) {
+          return Container();
+        },
+      ),
+    );
+  }
+}
+
+/*        scrollDirection: Axis.vertical,
+         children: [
           Container(
             color: Colors.red,
           ),
           Container(
             color: Colors.yellow,
           ),
-        ],
-      ),
-    );
-  }
-}
+        ], */
