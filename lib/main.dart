@@ -41,7 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
         itemCount: 8,
         itemBuilder: (BuildContext context, int index) {
           return Container(
+            alignment: Alignment.center,
             color: index % 2 == 0 ? Colors.yellow : Colors.blue,
+            child: Text(
+              index.toString(),
+              style: const TextStyle(
+                fontSize: 60,
+              ),
+            ),
           );
         },
       ),
