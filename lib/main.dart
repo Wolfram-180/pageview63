@@ -38,8 +38,11 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text(title),
       ),
       body: PageView.builder(
+        itemCount: 8,
         itemBuilder: (BuildContext context, int index) {
-          return Container();
+          return Container(
+            color: index % 2 == 0 ? Colors.yellow : Colors.blue,
+          );
         },
       ),
     );
